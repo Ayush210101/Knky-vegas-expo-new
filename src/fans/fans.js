@@ -207,7 +207,7 @@ document.querySelector(".button-sign").addEventListener("click", function () {
 function setVideoLinks() {
   const browser = Bowser.parse(window.navigator.userAgent);
   const mode = browser.platform.type === "mobile" ? "portrait" : "landscape";
-  const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
+  const ext = browser.browser.name === "Safari" ? "mp4" : "webm";
 
   for (let i = 1; i <= 6; i++) {
     const v = document.getElementById("s" + i);

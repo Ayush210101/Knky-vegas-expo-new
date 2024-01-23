@@ -117,6 +117,8 @@ video {
   border-right: 0;
   border-radius: 8px 0 0 8px;
   padding: 7px 11px;
+  padding-right: 4px;
+
   width: calc(100% - 24vh);
   background-color: #ffffff;
   align-items: center;
@@ -396,7 +398,7 @@ footer.vegas-expo p {
     margin: 0 20px;
   } */
   .creatortext img {
-    width: 50px;
+    width:50px;
     min-height: 36px;
   }
   .main-outer-container .carousel-control-next,
@@ -406,7 +408,7 @@ footer.vegas-expo p {
   }
   .next-icon img,
   .prev-icon img {
-    width: 50px;
+    width: 40px;
     height: 50px;
   }
   .vegas-expo p {
@@ -469,7 +471,10 @@ footer.vegas-expo p {
     padding: 8px 16px;
   }
   .carousel-indicators {
-    margin-bottom: 3rem  !important;
+   bottom: 9vh;
+   
+    padding-inline: 4rem;
+
   }
   .modal-dialog.modal-dialog-centered {
     min-width: auto;
@@ -511,7 +516,8 @@ footer.vegas-expo p {
   .carousel-control-next,
   .carousel-control-prev {
     top: unset;
-    bottom: 3.5%;
+    bottom: 12vh;
+
   }
   .carousel-inner {
     overflow: inherit;
@@ -530,5 +536,21 @@ footer.vegas-expo p {
   .first-last-name div{
     width: 100%;
   }
+  .carousel-control-prev {
+    left: 10%;
+}
+.carousel-control-next{
+  right: 10%;
+}
 
+@media (max-width: 450px) {
+  .button-sign {
+    width: 35%;
+    font-size: 3.8vw;
+  }
+  .creator {
+    font-size: 5.2vw;
+    padding-left: 10px;
+  }
+}
 }

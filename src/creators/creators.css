@@ -1,0 +1,526 @@
+button.signup-btn {
+  background: #808386;
+  border-radius: 8px;
+  border: none;
+  padding: 1.4vh 8vh;
+  width: 36.6vh;
+  color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-btn img {
+  padding-left: 10px;
+}
+
+.creatortext {
+  display: flex;
+  align-items: center;
+}
+
+.creator-head {
+  padding: 0 10vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8.2vh;
+  background-color: #13082c;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+}
+
+.creator {
+  color: #ffffff;
+  padding-left: 15px;
+  margin-bottom: 0;
+}
+
+.button-sign {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  width: 140px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .button-register {
+  display: none;
+} */
+
+.form-banner {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 8px;
+  height: 6px !important;
+}
+
+.carousel-indicators .active {
+  width: 85px !important;
+}
+
+.carousel-control-next-icon {
+  height: 4rem;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-banner {
+  height: 100vh;
+}
+
+.carousel-item {
+  height: calc(100vh - 120px);
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.terms-content a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.form-banner {
+  margin-top: 100px;
+}
+
+.country-inp {
+  display: flex;
+  align-items: center;
+}
+
+.country-code {
+  display: flex;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  padding: 7px 11px;
+  width: calc(100% - 24vh);
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.country-code span {
+  color: #131416;
+  margin: 0 4px;
+}
+
+.email-phone .mb-2 input[type="tel"] {
+  width: 26.6vh;
+  border-radius: 0 8px 8px 0;
+  padding: 7px 15px;
+}
+
+.validation-message {
+  color: #f11e11;
+  font-weight: 400;
+  font-size: 12px;
+  display: none;
+}
+.validation-message3 {
+  color: #f11e11;
+  font-weight: 400;
+  font-size: 12px;
+  display: none;
+}
+.vegas-expo p {
+  font-size: 13px;
+}
+.modal-dialog.modal-dialog-centered {
+  min-width: 74.4vh;
+  height: 53.1vh;
+}
+
+.flag-input,
+.flag-input:focus,
+.flag-input:focus-within {
+  border: none;
+  width: 3rem;
+  outline: none;
+}
+
+.modal-header {
+  display: block !important;
+  text-align: center !important;
+  border-bottom: 0 !important;
+  padding-top: 35px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 1;
+}
+
+.modal-header h1 {
+  font-size: 24px;
+  line-height: 35px;
+  color: #131416;
+  padding-bottom: 0;
+}
+
+.modal-header p {
+  font-size: 16px;
+  color: #4d5053;
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.modal-body {
+  margin: 0 auto !important;
+  padding-top: 0;
+}
+.btn-close {
+  padding: 1vh;
+}
+.modal-backdrop.show {
+  opacity: 0.8 !important;
+}
+
+.form-check-label {
+  padding-left: 15px !important;
+  font-size: 16px;
+  font-weight: 500;
+  color: #131416;
+}
+
+.form-check {
+  display: flex !important;
+  align-items: center !important;
+  padding-bottom: 0.8vh !important;
+}
+
+.form-check-input:checked {
+  background-color: #ac1991 !important;
+  border: 1px solid #ac1991 !important;
+}
+
+.form-check-input:checked[type="checkbox"] {
+  /* --bs-form-check-bg-image: url("/assets/images/vector-check.svg"); */
+  background-size: 18px;
+}
+
+.form-check-input[type="checkbox"] {
+  border: 1px solid #131416;
+  border-radius: 6px;
+}
+
+.form-check-input:focus,
+.btn-close:focus,
+.form-control:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.complete-btn {
+  cursor: pointer;
+  margin: 0 auto !important;
+  border-radius: 8px;
+  background-color: #ac1991;
+  border: 1px solid #ac1991;
+  padding: 8px 16px;
+  color: #ffffff;
+  text-align: center;
+  width: 30.2vh;
+  min-height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.complete-btn span {
+  padding-left: 10px;
+}
+
+.modal-footer {
+  border-top: 0 !important;
+  padding-bottom: 30px !important;
+}
+
+.modal-content.thankyou-banner {
+  min-width: 74.4vh;
+  height: 33.6vh !important;
+  /* height: 53.1vh; */
+}
+
+.thankyou_content {
+  text-align: center;
+  margin: auto;
+}
+
+.thankyou_content h1 {
+  font-size: 24px;
+  color: #131416;
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.thankyou_content p {
+  font-size: 16px;
+  color: #4d5053;
+}
+
+.next-icon img,
+.prev-icon img {
+  width: 60px;
+  height: 60px;
+}
+.carousel-item .form-banner label.required:after {
+  content: "*";
+  color: red;
+}
+.modal-body .form-check-label:after {
+  content: none !important;
+}
+.form-check-input.active {
+  background: transparent;
+}
+.header-cont {
+  height: 100%;
+  margin-bottom: 40px;
+}
+.header-cont h1 {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 25px;
+}
+.header-cont p {
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.terms-content {
+  margin-bottom: 30px;
+  text-align: left;
+}
+.lastname-inp,
+.phone-inp {
+  margin-left: 2vh;
+}
+.form-elements {
+  width: 74.4vh;
+  margin: 0 auto;
+}
+.first-last-name,
+.email-phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-last-name input[type="text"],
+/* .email-phone .mb-3 input[type="phone"], */
+.email-phone .mb-2 input[type="email"] {
+  width: 36vh;
+  border-radius: 8px;
+  padding: 7px 15px;
+  border: 1px solid #ffffff;
+}
+.username-input input[type="text"] {
+  width: 74.4vh;
+  border-radius: 8px;
+  padding: 7px 15px;
+  border: 1px solid #ffffff;
+}
+footer.vegas-expo p {
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.6;
+  font-size: 16px;
+}
+.carousel-indicators {
+  margin-bottom: 3rem !important;
+}
+.carousel-indicators button {
+  pointer-events: none;
+}
+
+.carousel.slide {
+  color: #ffffff;
+}
+#termsCondition {
+  overflow: hidden;
+}
+#termsCondition .modal-content,
+#privacyModal .modal-content {
+  overflow-y: scroll;
+  max-height: 70vh;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 1vh;
+  height: 2vhpx;
+  background-color: #aaa; /* or add it to the track */
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(119, 117, 117);
+  border-radius: 8px;
+}
+@media (max-width: 767px) {
+  .button-sign {
+    width: 15vh;
+    font-size: 1.8vh;
+  }
+  .creator {
+    font-size: 3vh;
+    padding-left: 10px;
+  }
+  /* .creator-head {
+    margin: 0 20px;
+  } */
+  .creatortext img {
+    width: 50px;
+    min-height: 36px;
+  }
+  .main-outer-container .carousel-control-next,
+  .main-outer-container .carousel-control-prev {
+    top: unset;
+    bottom: 0px;
+  }
+  .next-icon img,
+  .prev-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  .vegas-expo p {
+    font-size: 13px;
+  }
+  .header-cont h1 {
+    font-size: 30px;
+  }
+  .header-cont img {
+    width: 30px;
+  }
+  .form-banner {
+    margin-top: 0px;
+  }
+  .header-cont p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .first-last-name .mb-2 input[type="text"] {
+    justify-content: center;
+    width: 166px !important;
+  }
+  .form-elements {
+    width: auto;
+  }
+  .email-phone .mb-2 input[type="email"],
+  .username-input input[type="text"] {
+    width: 49vh;
+  }
+  .country-code {
+    width: auto;
+  }
+  .email-phone .mb-2 input[type="tel"] {
+    width: 36vh;
+  }
+  .form-banner {
+    padding: 0 14px;
+  }
+  .lastname-inp {
+    margin-left: 1vh;
+  }
+  .phone-inp {
+    margin-left: 0;
+  }
+  .header-cont {
+    margin-bottom: 10px;
+  }
+  label {
+    font-size: 12px;
+  }
+  .creator-head {
+    height: 9vh;
+    padding: 0 15px;
+  }
+  .header-cont h1 {
+    margin-top: 15px;
+  }
+  button.signup-btn {
+    padding: 8px 16px;
+  }
+  .carousel-indicators {
+    margin-bottom: -1rem !important;
+  }
+  .modal-dialog.modal-dialog-centered {
+    min-width: auto;
+    height: 65.2vh;
+  }
+  .modal-header h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .modal-body {
+    padding: 0;
+    margin: 0 0 0 88px !important;
+  }
+  .email-phone {
+    flex-direction: column;
+  }
+  .terms-content p {
+    font-size: 1.8vh;
+    margin-bottom: -1.5vh;
+  }
+  .modal-content.thankyou-banner {
+    min-width: auto;
+    height: 40.3vh !important;
+  }
+  .thankyou_content p {
+    width: 30vh;
+    margin: 0 auto;
+  }
+  .button-container {
+    padding: 0 15px;
+  }
+
+  footer.vegas-expo {
+    font-size: 2vh;
+  }
+  /* .carousel-indicators {
+    margin-bottom: 0rem !important;
+  } */
+  .carousel-control-next,
+  .carousel-control-prev {
+    top: unset;
+    bottom: -5%;
+  }
+  .carousel-inner {
+    overflow: inherit;
+  }
+  .complete-btn {
+    height: 4vh;
+  }
+  .mb-2,
+  .lastname-inp {
+    margin-bottom: 1vh;
+  }
+}

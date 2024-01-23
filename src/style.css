@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "SFDisplay-regular";
+  src: url("/assets/fonts/SFDisplay-Regular.otf");
+}
+
+body {
+  font-family: "SFDisplay-regular";
+}
+
+#app {
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  overflow: hidden;
+  background-color: #18032c;
+}
+/* Header */
+button.signup-btn {
+  background: #808386;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 16px;
+  width: 331px;
+  color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-btn img {
+  padding-left: 10px;
+}
+
+.creatortext {
+  display: flex;
+  align-items: center;
+}
+
+.creator-head {
+  padding: 0 85px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+  background-color: #13082c;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+}
+
+.creator {
+  color: #ffffff;
+  padding-left: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.button-sign {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  width: 140px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+.landing-btn {
+  color: #ffffff;
+  background: #27b1ff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 0;
+  width: 26vh;
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+}
+
+.landing-btn p {
+  margin: 0;
+  padding-left: 8px;
+  font-size: 2vh;
+}
+
+.landing-btn img {
+  height: 3vh;
+}
+
+#fanBtn {
+  background: #ac1991;
+  transform: translateX(112%);
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  white-space: nowrap;
+  opacity: 0.6;
+}
+.fadein {
+  animation: fadein 1s ease-in-out forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+
+  #creatorBtn{
+    margin-right: 5%
+  }
+  .creatortext img {
+    width: 7.3vh;
+  }
+  .creator-head {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .creator {
+    font-size: 3vh;
+    padding-left: 10px;
+  }
+  .button-sign {
+    width: 16vh;
+    font-size: 1.7vh;
+  }
+  .header-cont h1 {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  button.signup-btn {
+    padding: 8px 16px;
+  }
+  /* .bg {
+    top: -4%;
+  } */
+  .landing-btn {
+    position: initial;
+
+    /* bottom: 11%; */
+    /* left: 11%; */
+    /* top: unset; */
+    width: 20vh;
+  }
+  footer.vegas-expo {
+    font-size: 2vh;
+  }
+
+  .btn-wrapper{
+
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  #fanBtn {
+    background: #ac1991;
+    transform:none;
+  }
+  /* .landing-btn{
+    position: initial;
+  } */
+}

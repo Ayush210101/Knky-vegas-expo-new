@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/knky.svg" />
+    <title>KNKY Expo | Creators</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./fans.css" />
+  </head>
+  <body>
+    <div id="app">
+      <img class="bg" src="https://expo.knky.co/static/bg.jpg" alt="BG" />
+
+      <header class="header-container" id="header-text">
+        <div class="creator-head">
+          <div class="creatortext">
+            <a href="/">
+              <img
+                class="framecontainer-icon"
+                src="/assets/images/main_logo.svg"
+              />
+            </a>
+            <h2 class="creator" id="header-title">For Fans</h2>
+          </div>
+          <button class="button-sign">Sign up now</button>
+          <!-- <button class="button-register">Register</button> -->
+        </div>
+      </header>
+
+      <div class="creator-outer-container">
+        <div class="carousel-banner">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div id="carousel-wrapper" class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="5"
+                aria-label="Slide 6"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="6"
+                aria-label="Slide 7"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <video id="s1" autoplay loop muted playsinline></video>
+              </div>
+
+              <div class="carousel-item">
+                <video id="s2" autoplay loop muted playsinline></video>
+              </div>
+
+              <div class="carousel-item">
+                <video id="s3" autoplay loop muted playsinline></video>
+              </div>
+
+              <div class="carousel-item">
+                <video id="s4" autoplay loop muted playsinline></video>
+              </div>
+
+              <div class="carousel-item">
+                <video id="s5" autoplay loop muted playsinline></video>
+              </div>
+
+              <div class="carousel-item">
+                <video id="s6" autoplay loop muted playsinline></video>
+              </div>
+
+              <div class="carousel-item">
+                <form id="signupForm">
+                  <div class="form-banner">
+                    <div class="header-cont">
+                      <h1>
+                        <img src="/assets/images/emoji-icon.png" />
+                        Sign up now
+                      </h1>
+                      <p>Join the KNKY revolution today!</p>
+                    </div>
+                    <div class="form-elements">
+                      <div class="first-last-name">
+                        <div class="mb-2">
+                          <label
+                            for="FormControlInput1"
+                            class="form-label required"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="f_name"
+                            name="f_name"
+                            placeholder="Your first name"
+                          />
+                        </div>
+
+                        <div class="mb-2 lastname-inp">
+                          <label
+                            for="FormControlTextarea1"
+                            class="form-label required"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="l_name"
+                            name="l_name"
+                            placeholder="Your last name"
+                          />
+                        </div>
+                      </div>
+                      <div class="email-phone">
+                        <div class="mb-2">
+                          <label for="email" class="form-label required"
+                            >Email</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="name@example.com"
+                          />
+                          <span class="validation-message" id="valid-email"
+                            >This email address is already used.</span
+                          >
+                        </div>
+
+                        <div class="mb-2 phone-inp">
+                          <label for="FormControlTextarea1" class="form-label"
+                            >Phone number</label
+                          >
+                          <div class="country-inp">
+                            <div class="country-code">
+                              <img
+                                id="c-flag"
+                                src="https://flagcdn.com/16x12/gb.png"
+                              />
+                              <input
+                                onchange="checkCountry()"
+                                class="flag-input"
+                                value="+44"
+                              />
+                            </div>
+                            <script>
+                              let countryList = {
+                                "+93": "AF", // Afghanistan
+                                "+355": "AL", // Albania
+                                "+213": "DZ", // Algeria
+                                "+44": "gb", // uk
+
+                                // ... (add more entries)
+                                "+1": "US", // United States
+                                "+598": "UY", // Uruguay
+                                "+998": "UZ", // Uzbekistan
+                                "+678": "VU", // Vanuatu
+                                // ... (add more entries)
+                                "+263": "ZW", // Zimbabwe
+                              };
+                              function checkCountry() {
+                                let country =
+                                  countryList[
+                                    document.querySelector(".flag-input").value
+                                  ];
+                                document.querySelector(
+                                  "#c-flag"
+                                ).src = `https://flagcdn.com/16x12/${country.toLowerCase()}.png`;
+                              }
+                            </script>
+                            <input
+                              type="tel"
+                              class="form-control"
+                              id="FormControlInput1"
+                              placeholder="00 000 000"
+                            />
+                          </div>
+                          <span class="validation-message" id="phone"
+                            >This phone number is already in used</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mb-2 username-input">
+                        <label for="FormControlTextarea1" class="form-label">
+                          Requested Username</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="username"
+                          name="username"
+                          placeholder="Eg: andora777"
+                          id="username"
+                          name="username"
+                        />
+                        <span class="validation-message" id="valid-username"
+                          >This username already exists,please enter another
+                          one.</span
+                        >
+                      </div>
+                      <div class="terms-content">
+                        <p>
+                          By clicking on the “Sign up” button below, you are
+                          confirming that you are at least 18 years of age (or
+                          the legal age of consent in your respective country)
+                          and agree to our
+                          <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#termsCondition"
+                            >Terms & Conditions</a
+                          >
+                          and
+                          <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#privacyModal"
+                            >Privacy Policy</a
+                          >
+                        </p>
+                        <!-- Terms and Condition Modal -->
+                      </div>
+                      <button class="signup-btn" type="submit" id="submitBtn">
+                        Sign up
+                        <img src="/assets/images/arrow-right.svg" />
+                      </button>
+
+                      <!-- Checkbox Modal -->
+                      <div
+                        class="modal fade"
+                        id="featureModal"
+                        tabindex="-1"
+                        aria-labelledby="ModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                            <div class="modal-header">
+                              <h1 id="ModalLabel">
+                                Perfect! <br />
+                                Just one more thing...
+                              </h1>
+                              <p>Which KNKY accounts are you interested in?</p>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value="prime"
+                                  id="flexCheckDefault"
+                                  name="prime"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckDefault"
+                                >
+                                  KNKY Prime(fans)</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value="unlimited"
+                                  id="flexCheckChecked"
+                                  name="unlimited"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckChecked"
+                                >
+                                  KNKY Unlimited (fans)
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value="pro"
+                                  id="flexCheckChecked"
+                                  name="pro"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckChecked"
+                                >
+                                  KNKY ProCreator (creators)
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value="match_maker_prime"
+                                  name="match_maker_prime"
+                                  id="flexCheckChecked"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckChecked"
+                                >
+                                  MatchMaker Prime
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value="match_maker_private"
+                                  id="flexCheckChecked"
+                                  name="match_maker_private"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckChecked"
+                                >
+                                  MatchMaker Private
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value="referral"
+                                  id="flexCheckChecked"
+                                  name="referral"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckChecked"
+                                >
+                                  Referral Partner
+                                </label>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <div
+                                class="complete-btn"
+                                id="intrestSubmitBtn"
+                                data-bs-dismiss="modal"
+                              >
+                                Submit
+                                <span
+                                  ><svg
+                                    width="19"
+                                    height="20"
+                                    viewBox="0 0 19 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M18.9993 10.0494C19.0034 9.69783 18.91 9.35183 18.729 9.04857C18.548 8.74532 18.2863 8.49629 17.972 8.32827L3.01497 0.2519C2.69277 0.0714934 2.32498 -0.0151229 1.95456 0.00216261C1.58413 0.0194481 1.22635 0.139923 0.922991 0.349521C0.280855 0.77962 -0.048133 1.80606 0.131838 2.54599L1.52769 8.29502C1.59728 8.58154 1.7635 8.83648 1.9993 9.01836C2.2351 9.20023 2.52661 9.29834 2.82636 9.2967L11.1497 9.27123C11.2505 9.26911 11.3507 9.28706 11.4442 9.32399C11.5378 9.36093 11.6228 9.41608 11.694 9.48614C11.7653 9.55619 11.8215 9.6397 11.8591 9.73164C11.8966 9.82357 11.9149 9.92202 11.9127 10.0211C11.9113 10.4328 11.5708 10.7674 11.1446 10.7759L2.81341 10.795C2.19575 10.7964 1.65583 11.2138 1.50826 11.8044L0.062729 17.5754C-0.112923 18.2573 0.0872053 18.9378 0.576727 19.4189C0.634317 19.4755 0.699106 19.5391 0.764616 19.5893C1.39811 20.0704 2.22886 20.1312 2.93867 19.7591L17.9468 11.7641C18.5911 11.4281 18.9906 10.7667 19 10.0501L18.9993 10.0494Z"
+                                      fill="white"
+                                    />
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Welcome Modal -->
+                      <div
+                        class="modal fade"
+                        id="thankyouModal"
+                        tabindex="-1"
+                        aria-labelledby="ModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content thankyou-banner">
+                            <div class="thankyou_content">
+                              <!-- <img src="/assets/images/vector-circle.svg" /> -->
+                              <svg
+                                width="67"
+                                height="68"
+                                viewBox="0 0 67 68"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M33.5001 0.666672C15.1201 0.666672 0.166748 15.62 0.166748 34C0.166748 52.38 15.1201 67.3333 33.5001 67.3333C51.8801 67.3333 66.8334 52.38 66.8334 34C66.8334 15.62 51.8801 0.666672 33.5001 0.666672ZM27.8963 47.6505C27.3109 48.2358 26.3621 48.2363 25.7761 47.6516L15.8753 37.7722C15.0936 36.9922 15.0921 35.7262 15.8718 34.9443L17.7538 33.057C18.534 32.2745 19.8009 32.2731 20.583 33.0538L26.4765 38.9371C26.6718 39.132 26.9882 39.1319 27.1833 38.9368L43.0625 23.0576C43.8436 22.2765 45.1099 22.2765 45.891 23.0576L47.7759 24.9425C48.5569 25.7235 48.5569 26.9898 47.7759 27.7709L27.8963 47.6505Z"
+                                  fill="#AC1991"
+                                />
+                              </svg>
+
+                              <h1>Welcome to the KNKY revolution!</h1>
+                              <p>
+                                We’ll drop you an email shortly, stay tuned! 🥳
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span class="prev-icon" aria-hidden="true">
+                  <img src="/assets/images/prev-arrow.svg" />
+                </span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span class="next-icon" aria-hidden="true">
+                  <img src="/assets/images/next-arrow.svg" />
+                </span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="vegas-expo">© 2024 KNKY®</footer>
+    </div>
+
+    <script type="module" src="./fans.js"></script>
+  </body>
+</html>

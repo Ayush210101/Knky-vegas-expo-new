@@ -15,7 +15,7 @@ body {
   left: 0;
   overflow: hidden;
   background-color: #18032c;
-  height: 102vh;
+  /* height: 102vh; */
 }
 /* Header */
 button.signup-btn {

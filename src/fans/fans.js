@@ -153,6 +153,8 @@ function updateIconsVisibility() {
     nexticon.style.display = "none";
     document.querySelector('#carousel-wrapper').style.display = 'none'
     document.querySelector('.carousel-control-prev').style.display = 'none'
+    document.querySelector('#app').style.height = '102vh'
+
   } else {
     // Active on a middle button,showing both icons
     icon.style.display = "block";

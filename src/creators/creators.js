@@ -15,6 +15,8 @@ if (searchparams) {
   goToLastSlide("carouselExampleIndicators");
   document.querySelector('#carousel-wrapper').style.display = 'none'
   document.querySelector('.carousel-control-prev').style.display = 'none'
+  document.querySelector('#app').style.height = '102vh'
+
 }
 
 function updateIconsVisibility() {
@@ -32,6 +34,8 @@ function updateIconsVisibility() {
     nexticon.style.display = "none";
     document.querySelector('#carousel-wrapper').style.display = 'none'
     document.querySelector('.carousel-control-prev').style.display = 'none'
+    document.querySelector('#app').style.height = '102vh'
+
   } else {
     // Active on a middle button,showing both icons
     icon.style.display = "block";
@@ -160,13 +164,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-      body: JSON.stringify(data),
-    })
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+        body: JSON.stringify(data),
+      })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);

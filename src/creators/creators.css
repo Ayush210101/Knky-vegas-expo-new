@@ -428,14 +428,14 @@ footer.vegas-expo p {
   }
   .first-last-name .mb-2 input[type="text"] {
     justify-content: center;
-    width: 166px !important;
+    width: 100% !important;
   }
   .form-elements {
     width: auto;
   }
   .email-phone .mb-2 input[type="email"],
   .username-input input[type="text"] {
-    width: 49vh;
+    width: 100%;
   }
   .country-code {
     width: auto;
@@ -540,10 +540,10 @@ footer.vegas-expo p {
 
 @media (max-width: 450px) {
   .email-phone .mb-2 input[type="email"], .username-input input[type="text"]{
-    width: 43vh;
+    width: 100%;
   }
   .email-phone .mb-2 input[type="tel"] {
-    width: 33vh;
+    width: 100%;
 }
   
 }

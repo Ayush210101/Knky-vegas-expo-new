@@ -435,13 +435,13 @@ footer.vegas-expo p {
   }
   .email-phone .mb-2 input[type="email"],
   .username-input input[type="text"] {
-    width: 49vh;
+    width: 100%;
   }
   .country-code {
     width: auto;
   }
   .email-phone .mb-2 input[type="tel"] {
-    width: 36vh;
+    width: 100%;
   }
   .form-banner {
     padding: 0 14px;

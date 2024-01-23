@@ -64,10 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
       username: username,
       email: email,
       user_type: "USER", // Set a default value or dynamically retrieve it
+      source: "EXPO",
     };
 
     var apiUrl =
-      "https://backend-test.knky.co/v1/users/capture-signup-interest";
+      "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
         method: "POST",
@@ -219,7 +220,7 @@ function callFeatures(userId) {
   console.log(featureApiRaw);
   submitAllForm.addEventListener("click", function () {
     var featureApiUrl =
-      "https://backend-test.knky.co/v1/users/add-knky-interest";
+      "https://admin-alpha-backend.knky.co/v1/users/add-knky-interest";
     var featureApiHeaders = new Headers();
     featureApiHeaders.append("x-api-key", "gslie49st7kjjgd9268ux0t63");
     featureApiHeaders.append("Content-Type", "application/json");

@@ -127,7 +127,7 @@ video {
   margin: 0 4px;
 }
 
-.email-phone .mb-2 input[type="tel"] {
+.email-phone .mb-3 input[type="tel"] {
   width: 26.6vh;
   border-radius: 0 8px 8px 0;
   padding: 7px 15px;
@@ -338,7 +338,7 @@ video {
 }
 .first-last-name input[type="text"],
 /* .email-phone .mb-3 input[type="phone"], */
-.email-phone .mb-2 input[type="email"] {
+.email-phone .mb-3 input[type="email"] {
   width: 36vh;
   border-radius: 8px;
   padding: 7px 15px;
@@ -426,25 +426,25 @@ footer.vegas-expo p {
     font-size: 16px;
     line-height: 24px;
   }
-  .first-last-name .mb-2 input[type="text"] {
+  .first-last-name .mb-3 input[type="text"] {
     justify-content: center;
     width: 100% !important;
   }
   .form-elements {
     width: auto;
   }
-  .email-phone .mb-2 input[type="email"],
+  .email-phone .mb-3 input[type="email"],
   .username-input input[type="text"] {
     width: 100%;
   }
   .country-code {
     width: auto;
   }
-  .email-phone .mb-2 input[type="tel"] {
-    width: 36vh;
+  .email-phone .mb-3 input[type="tel"] {
+    width: 100%;
   }
   .form-banner {
-    padding: 0 14px;
+    padding: 0 17px;
   }
   .lastname-inp {
     margin-left: 1vh;
@@ -453,7 +453,7 @@ footer.vegas-expo p {
     margin-left: 0;
   }
   .header-cont {
-    margin-bottom: 10px;
+    margin-bottom: 6%;
   }
   label {
     font-size: 12px;
@@ -487,8 +487,8 @@ footer.vegas-expo p {
     flex-direction: column;
   }
   .terms-content p {
-    font-size: 1.8vh;
-    margin-bottom: -1.5vh;
+    font-size: 1.55vh;
+    margin-bottom: -1vh;
   }
   .modal-content.thankyou-banner {
     min-width: auto;
@@ -532,18 +532,32 @@ footer.vegas-expo p {
   .complete-btn {
     height: 4vh;
   }
-  .mb-2,
+  .mb-3,
   .lastname-inp {
     margin-bottom: 1vh;
+  }
+  .phone-inp, .emailDiv{
+    width: 100% !important
+    ;
+  } 
+  .first-last-name div, button.signup-btn{
+    width: 100%;
   }
 }
 
 @media (max-width: 450px) {
-  .email-phone .mb-2 input[type="email"], .username-input input[type="text"]{
+  .email-phone .mb-3 input[type="email"], .username-input input[type="text"]{
     width: 100%;
   }
-  .email-phone .mb-2 input[type="tel"] {
+  .email-phone .mb-3 input[type="tel"] {
     width: 100%;
 }
-  
+.button-sign {
+  width: 35%;
+  font-size: 3.8vw;
+}
+.creator {
+  font-size: 5.2vw;
+  padding-left: 10px;
+}
 }

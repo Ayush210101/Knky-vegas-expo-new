@@ -13,10 +13,9 @@ var secondButton = document.querySelector(
 let searchparams = window.location.search.split("=")[1];
 if (searchparams) {
   goToLastSlide("carouselExampleIndicators");
-  document.querySelector('#carousel-wrapper').style.display = 'none'
-  document.querySelector('.carousel-control-prev').style.display = 'none'
-  document.querySelector('#app').style.height = '102vh'
-
+  document.querySelector("#carousel-wrapper").style.display = "none";
+  document.querySelector(".carousel-control-prev").style.display = "none";
+  document.querySelector("#app").style.height = "102vh";
 }
 
 function updateIconsVisibility() {
@@ -32,10 +31,9 @@ function updateIconsVisibility() {
     // Active on the last button, hide next-icon and show prev-icon
     icon.style.display = "block";
     nexticon.style.display = "none";
-    document.querySelector('#carousel-wrapper').style.display = 'none'
-    document.querySelector('.carousel-control-prev').style.display = 'none'
-    document.querySelector('#app').style.height = '102vh'
-
+    document.querySelector("#carousel-wrapper").style.display = "none";
+    document.querySelector(".carousel-control-prev").style.display = "none";
+    document.querySelector("#app").style.height = "102vh";
   } else {
     // Active on a middle button,showing both icons
     icon.style.display = "block";
@@ -45,7 +43,6 @@ function updateIconsVisibility() {
 
 function nextremove() {
   updateIconsVisibility();
-
 
   console.log("this should be removed");
 }
@@ -79,18 +76,18 @@ function goToLastSlide(carouselId) {
   );
   var lastSlideIndex = slides.length - 1;
   carousel.to(lastSlideIndex);
-
 }
 
 document.querySelector(".button-sign").addEventListener("click", function () {
   goToLastSlide("carouselExampleIndicators");
-  document.querySelector('#carousel-wrapper').style.display = 'none'
-  document.querySelector('.carousel-control-next').style.display = 'none'
+  document.querySelector("#carousel-wrapper").style.display = "none";
+  document.querySelector(".carousel-control-next").style.display = "none";
 });
 
 function setVideoLinks() {
   const browser = Bowser.parse(window.navigator.userAgent);
-  const mode = browser.platform.type === "mobile" ? "portrait" : "landscape";
+  const mode =
+    window.innerWidth > window.innerHeight ? "landscape" : "portrait";
   const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
 
   for (let i = 1; i <= 6; i++) {
@@ -157,20 +154,20 @@ document.addEventListener("DOMContentLoaded", function () {
       username: username ? username : "knky-user-" + Math.random(),
       email: email,
       user_type: "CREATOR", // Set a default value or dynamically retrieve it
-      source: "EXPO"
+      source: "EXPO",
     };
 
     var apiUrl =
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": apiKey,
-        },
-        body: JSON.stringify(data),
-      })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+      },
+      body: JSON.stringify(data),
+    })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);

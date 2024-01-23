@@ -71,13 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": apiKey,
-        },
-        body: JSON.stringify(data),
-      })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+      },
+      body: JSON.stringify(data),
+    })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);
@@ -151,10 +151,9 @@ function updateIconsVisibility() {
     // Active on the last button, hide next-icon and show prev-icon
     icon.style.display = "block";
     nexticon.style.display = "none";
-    document.querySelector('#carousel-wrapper').style.display = 'none'
-    document.querySelector('.carousel-control-prev').style.display = 'none'
-    document.querySelector('#app').style.height = '102vh'
-
+    document.querySelector("#carousel-wrapper").style.display = "none";
+    document.querySelector(".carousel-control-prev").style.display = "none";
+    document.querySelector("#app").style.height = "102vh";
   } else {
     // Active on a middle button,showing both icons
     icon.style.display = "block";
@@ -204,13 +203,14 @@ function goToLastSlide(carouselId) {
 
 document.querySelector(".button-sign").addEventListener("click", function () {
   goToLastSlide("carouselExampleIndicators");
-  document.querySelector('#carousel-wrapper').style.display = 'none'
-  document.querySelector('.carousel-control-next').style.display = 'none'
+  document.querySelector("#carousel-wrapper").style.display = "none";
+  document.querySelector(".carousel-control-next").style.display = "none";
 });
 
 function setVideoLinks() {
   const browser = Bowser.parse(window.navigator.userAgent);
-  const mode = browser.platform.type === "mobile" ? "portrait" : "landscape";
+  const mode =
+    window.innerWidth > window.innerHeight ? "landscape" : "portrait";
   const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
 
   for (let i = 1; i <= 6; i++) {

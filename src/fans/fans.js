@@ -246,3 +246,14 @@ function callFeatures(userId) {
   });
 }
 setVideoLinks();
+
+// Replay when Slide In
+document
+  .getElementById("carouselExampleIndicators")
+  .addEventListener("slide.bs.carousel", (e) => {
+    const n = e.to;
+    if (n === 6) return;
+    const v = document.getElementById("s" + (n + 1));
+    v.currentTime = 0;
+    v.play();
+  });

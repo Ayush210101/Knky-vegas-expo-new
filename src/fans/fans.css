@@ -371,6 +371,9 @@ footer.vegas-expo p {
 #termsCondition {
   overflow: hidden;
 }
+#termsCondition * , #privacyModal * {
+  font-size: 97% !important;
+}
 #termsCondition .modal-content,
 #privacyModal .modal-content {
   overflow-y: scroll;
@@ -486,7 +489,7 @@ footer.vegas-expo p {
   }
   .modal-body {
     padding: 0;
-    margin: 0 0 0 88px !important;
+    margin: 0 0 0 6% !important;
   }
   .email-phone {
     flex-direction: column;
@@ -547,6 +550,7 @@ footer.vegas-expo p {
   .button-sign {
     width: 35%;
     font-size: 3.8vw;
+    font-weight: 100;
   }
   .creator {
     font-size: 5.2vw;

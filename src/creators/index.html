@@ -15,6 +15,38 @@
 
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="./creators.css" />
+
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-93CHQ5YY9M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-93CHQ5YY9M');
+    gtag('config', 'UA-56767286-1');
+
+  </script>
+
+  
+
+  <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '694022539243754');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" 
+       src="https://www.facebook.com/tr?id=694022539243754&ev=PageView&noscript=1"/>
+</noscript>
   </head>
   <body>
     <div id="app">
@@ -177,12 +209,12 @@
                             <div class="country-code">
                               <img
                                 id="c-flag"
-                                src="https://flagcdn.com/16x12/gb.png"
+                                src="https://flagcdn.com/16x12/us.png"
                               />
                               <input
                                 onchange="checkCountry()"
                                 class="flag-input"
-                                value="+44"
+                                value="+1"
                               />
                             </div>
                             <script>
@@ -451,10 +483,10 @@
                           id="username"
                           name="username"
                         />
-                        <span class="validation-message" id="valid-username"
+                        <!-- <span class="validation-message" id="valid-username"
                           >This username already exists,please enter another
                           one.</span
-                        >
+                        > -->
                       </div>
                       <div class="terms-content">
                         <p>

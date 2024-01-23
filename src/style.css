@@ -15,6 +15,7 @@ body {
   left: 0;
   overflow: hidden;
   background-color: #18032c;
+  height: 102vh;
 }
 /* Header */
 button.signup-btn {
@@ -175,14 +176,14 @@ footer {
   }
   footer.vegas-expo {
     font-size: 2vh;
-    position: fixed !important;
+    /* position: fixed !important;
     left: 0 !important;
     bottom: 0 !important;
     width: 100% !important;
-    /* background-color: red; */
+   
     color: white !important;
     text-align: center !important;
-    transform: none !important;
+    transform: none !important; */
   }
 
   .btn-wrapper{
@@ -205,7 +206,11 @@ footer {
 
 @media (max-width: 450px) {
   .button-sign{
-    width: 18vh;
+    /* width: 18vh; */
+    width: 35%;
+    font-size: 3.8vw;
+    font-weight: 100;
   }
+  
   
 }

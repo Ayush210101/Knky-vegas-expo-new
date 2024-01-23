@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var lastName = document.getElementById("l_name").value;
     var email = document.getElementById("email").value;
     var username = document.getElementById("username").value;
-    var validator1 = document.getElementById("valid-username");
+    // var validator1 = document.getElementById("valid-username");
     var validator2 = document.getElementById("valid-email");
 
     if (
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
           callFeatures(apiResponse.data._id);
         }
         if (apiResponse.error) {
-          validator1.style.display = "block";
+          // validator1.style.display = "block";
           validator2.style.display = "block";
         }
 

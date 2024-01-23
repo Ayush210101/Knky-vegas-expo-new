@@ -46,7 +46,7 @@ function show() {
 
 function setVideoLinks() {
   const browser = Bowser.parse(window.navigator.userAgent);
-  const mode = browser.platform.type === "mobile" ? "portrait" : "landscape";
+  const mode = window.innerWidth > window.innerHeight ? "landscape" : "portrait";
   const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
 
   landingVideoRef.src = `https://expo.knky.co/static/${mode}/landing.${ext}#t=0`;

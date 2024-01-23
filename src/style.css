@@ -194,3 +194,10 @@ footer {
   }
 
 }
+
+@media (max-width: 450px) {
+  .button-sign{
+    width: 18vh;
+  }
+  
+}

@@ -511,7 +511,20 @@ footer.vegas-expo p {
   .carousel-control-next,
   .carousel-control-prev {
     top: unset;
-    bottom: 3.5%;
+   bottom: 12vh;
+
+  }
+  .carousel-indicators{
+    padding-inline: 4rem;
+  }
+  .carousel-control-prev {
+    left: 15px;
+}
+  .carousel-control-next {
+    right: 15px;
+}
+  .carousel-indicators{
+    bottom: 9vh;
   }
   .carousel-inner {
     overflow: inherit;
@@ -523,4 +536,14 @@ footer.vegas-expo p {
   .lastname-inp {
     margin-bottom: 1vh;
   }
+}
+
+@media (max-width: 450px) {
+  .email-phone .mb-2 input[type="email"], .username-input input[type="text"]{
+    width: 43vh;
+  }
+  .email-phone .mb-2 input[type="tel"] {
+    width: 33vh;
+}
+  
 }

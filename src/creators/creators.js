@@ -28,6 +28,8 @@ function updateIconsVisibility() {
     // Active on the last button, hide next-icon and show prev-icon
     icon.style.display = "block";
     nexticon.style.display = "none";
+    document.querySelector('#carousel-wrapper').style.display = 'none'
+    document.querySelector('.carousel-control-prev').style.display = 'none'
   } else {
     // Active on a middle button,showing both icons
     icon.style.display = "block";
@@ -37,7 +39,9 @@ function updateIconsVisibility() {
 
 function nextremove() {
   updateIconsVisibility();
-  console.log("I am calling");
+
+
+  console.log("this should be removed");
 }
 
 function showNextIcon() {
@@ -52,7 +56,6 @@ nexticon.addEventListener("click", function () {
     // Show next-icon
     nexticon.style.display = "none";
   }
-  s;
 });
 icon.addEventListener("click", function () {
   // Check if last button is active when prev-icon is clicked
@@ -62,6 +65,7 @@ icon.addEventListener("click", function () {
   }
   showNextIcon();
 });
+
 function goToLastSlide(carouselId) {
   var carousel = new bootstrap.Carousel(document.getElementById(carouselId));
   var slides = Array.from(
@@ -69,6 +73,7 @@ function goToLastSlide(carouselId) {
   );
   var lastSlideIndex = slides.length - 1;
   carousel.to(lastSlideIndex);
+
 }
 
 document.querySelector(".button-sign").addEventListener("click", function () {
@@ -150,13 +155,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://backend-test.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-      body: JSON.stringify(data),
-    })
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+        body: JSON.stringify(data),
+      })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);
@@ -216,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return username.trim() !== "";
   }
 });
+
 function callFeatures(userId) {
   featureApiRaw.user_id = userId;
   console.log(featureApiRaw);

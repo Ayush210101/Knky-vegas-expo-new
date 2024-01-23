@@ -137,12 +137,12 @@ footer {
   }
 }
 @media (max-width: 767px) {
-
-  #creatorBtn{
-    margin-right: 5%
+  #creatorBtn {
+    margin-right: 5%;
   }
   .creatortext img {
-    width: 7.3vh;
+    width: 50px;
+    min-height: 36px;
   }
   .creator-head {
     height: 60px;
@@ -186,8 +186,7 @@ footer {
     transform: none !important; */
   }
 
-  .btn-wrapper{
-
+  .btn-wrapper {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -195,22 +194,18 @@ footer {
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-
   }
   #fanBtn {
     background: #ac1991;
-    transform:none;
+    transform: none;
   }
-
 }
 
 @media (max-width: 450px) {
-  .button-sign{
+  .button-sign {
     /* width: 18vh; */
     width: 35%;
     font-size: 3.8vw;
     font-weight: 100;
   }
-  
-  
 }

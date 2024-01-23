@@ -371,7 +371,8 @@ footer.vegas-expo p {
 #termsCondition {
   overflow: hidden;
 }
-#termsCondition * , #privacyModal * {
+#termsCondition *,
+#privacyModal * {
   font-size: 97% !important;
 }
 #termsCondition .modal-content,
@@ -401,7 +402,7 @@ footer.vegas-expo p {
     margin: 0 20px;
   } */
   .creatortext img {
-    width:50px;
+    width: 50px;
     min-height: 36px;
   }
   .main-outer-container .carousel-control-next,
@@ -464,7 +465,8 @@ footer.vegas-expo p {
     font-size: 12px;
   }
   .creator-head {
-    height: 9vh;
+    height: 56px;
+
     padding: 0 15px;
   }
   .header-cont h1 {
@@ -474,10 +476,9 @@ footer.vegas-expo p {
     padding: 8px 16px;
   }
   .carousel-indicators {
-   bottom: 9vh;
-   
-    padding-inline: 4rem;
+    bottom: 9vh;
 
+    padding-inline: 4rem;
   }
   .modal-dialog.modal-dialog-centered {
     min-width: auto;
@@ -520,7 +521,6 @@ footer.vegas-expo p {
   .carousel-control-prev {
     top: unset;
     bottom: 12vh;
-
   }
   .carousel-inner {
     overflow: inherit;
@@ -533,28 +533,29 @@ footer.vegas-expo p {
     margin-bottom: 1vh;
   }
 
-  .emailDiv, .phone-inp{
+  .emailDiv,
+  .phone-inp {
     width: 100%;
   }
-  .first-last-name div{
+  .first-last-name div {
     width: 100%;
   }
   .carousel-control-prev {
     left: 10%;
-}
-.carousel-control-next{
-  right: 10%;
-}
+  }
+  .carousel-control-next {
+    right: 10%;
+  }
 
-@media (max-width: 450px) {
-  .button-sign {
-    width: 35%;
-    font-size: 3.8vw;
-    font-weight: 100;
+  @media (max-width: 450px) {
+    .button-sign {
+      width: 35%;
+      font-size: 3.8vw;
+      font-weight: 100;
+    }
+    .creator {
+      font-size: 5.2vw;
+      padding-left: 10px;
+    }
   }
-  .creator {
-    font-size: 5.2vw;
-    padding-left: 10px;
-  }
-}
 }

@@ -469,7 +469,7 @@ footer.vegas-expo p {
     padding: 8px 16px;
   }
   .carousel-indicators {
-    margin-bottom: 9rem  !important;
+    margin-bottom: 3rem  !important;
   }
   .modal-dialog.modal-dialog-centered {
     min-width: auto;
@@ -511,7 +511,7 @@ footer.vegas-expo p {
   .carousel-control-next,
   .carousel-control-prev {
     top: unset;
-    bottom: 15%;
+    bottom: 3.5%;
   }
   .carousel-inner {
     overflow: inherit;

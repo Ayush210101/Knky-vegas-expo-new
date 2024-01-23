@@ -160,13 +160,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": apiKey,
-        },
-        body: JSON.stringify(data),
-      })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+      },
+      body: JSON.stringify(data),
+    })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);
@@ -255,3 +255,14 @@ function callFeatures(userId) {
       .catch((error) => console.log("error", error));
   });
 }
+
+// Replay when Slide In
+document
+  .getElementById("carouselExampleIndicators")
+  .addEventListener("slide.bs.carousel", (e) => {
+    const n = e.to;
+    if (n === 6) return;
+    const v = document.getElementById("s" + (n + 1));
+    v.currentTime = 0;
+    v.play();
+  });

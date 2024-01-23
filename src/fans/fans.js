@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = {
       f_name: firstName,
       l_name: lastName,
-      username: username,
+      username: username ? username : "knky-user-" + Math.random(),
       email: email,
       user_type: "USER", // Set a default value or dynamically retrieve it
       source: "EXPO",
@@ -202,6 +202,8 @@ function goToLastSlide(carouselId) {
 
 document.querySelector(".button-sign").addEventListener("click", function () {
   goToLastSlide("carouselExampleIndicators");
+  document.querySelector('#carousel-wrapper').style.display = 'none'
+  document.querySelector('.carousel-control-next').style.display = 'none'
 });
 
 function setVideoLinks() {

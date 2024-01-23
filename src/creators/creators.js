@@ -13,6 +13,8 @@ var secondButton = document.querySelector(
 let searchparams = window.location.search.split("=")[1];
 if (searchparams) {
   goToLastSlide("carouselExampleIndicators");
+  document.querySelector('#carousel-wrapper').style.display = 'none'
+  document.querySelector('.carousel-control-prev').style.display = 'none'
 }
 
 function updateIconsVisibility() {
@@ -78,6 +80,8 @@ function goToLastSlide(carouselId) {
 
 document.querySelector(".button-sign").addEventListener("click", function () {
   goToLastSlide("carouselExampleIndicators");
+  document.querySelector('#carousel-wrapper').style.display = 'none'
+  document.querySelector('.carousel-control-next').style.display = 'none'
 });
 
 function setVideoLinks() {
@@ -146,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = {
       f_name: firstName,
       l_name: lastName,
-      username: username,
+      username: username ? username : "knky-user-" + Math.random(),
       email: email,
       user_type: "CREATOR", // Set a default value or dynamically retrieve it
       source: "EXPO"

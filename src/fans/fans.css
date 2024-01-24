@@ -304,7 +304,6 @@ video {
   background: transparent;
 }
 .header-cont {
-  height: 100%;
   margin-bottom: 40px;
 }
 .header-cont h1 {
@@ -388,6 +387,36 @@ footer.vegas-expo p {
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
   background: rgb(119, 117, 117);
   border-radius: 8px;
+}
+@media (min-width: 2000px) {
+  .email-phone .mb-2 input[type="tel"] {
+    width: 31.3vh;
+  }
+  .country-code {
+    padding: 7px 11px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .form-banner {
+    margin-top: 100px;
+  }
+  .email-phone .mb-2 input[type="tel"] {
+    width: 28vh;
+  }
+  .form-banner {
+    margin-top: 100px;
+    height: 74vh;
+    overflow: scroll;
+  }
+  .country-code {
+    padding: 7px 11px;
+  }
+  .form-elements::-webkit-scrollbar {
+    width: 0px;
+  }
+  button.signup-btn {
+    margin-bottom: 5rem;
+  }
 }
 @media (max-width: 767px) {
   .button-sign {

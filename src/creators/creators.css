@@ -397,15 +397,17 @@ footer.vegas-expo p {
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .form-banner {
-    margin-top: 100px;
-  }
-  .form-banner {
-    margin-top: 100px;
-    height: 74vh;
+    margin-top: 0 !important;
+    padding-top: 100px;
+    height: 100vh;
     overflow: scroll;
   }
+  .form-elements {
+    overflow: scroll;
+    height: 100vh;
+  }
   .email-phone .mb-2 input[type="tel"] {
-    width: 28vh;
+    width: 24vh;
   }
   .form-elements::-webkit-scrollbar {
     width: 0px;

@@ -30,17 +30,20 @@ button.signup-btn {
   justify-content: center;
   align-items: center;
 }
+
 @media (min-width: 768px) and (max-width: 1400px) {
   .form-banner {
-    margin-top: 100px;
-  }
-  .form-banner {
-    margin-top: 100px;
-    height: 74vh;
+    margin-top: 0 !important;
+    padding-top: 100px;
+    height: 100vh;
     overflow: scroll;
   }
+  .form-elements {
+    overflow: scroll;
+    height: 100vh;
+  }
   .email-phone .mb-2 input[type="tel"] {
-    width: 28vh;
+    width: 24vh;
   }
   .country-code {
     padding: 7px 11px;
@@ -136,7 +139,28 @@ button.signup-btn {
   background: #ac1991;
   transform: translateX(112%);
 }
+.btn-creator,
+.btn-fan {
+  color: #ffffff;
+  background: #27b1ff !important;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 0;
 
+  cursor: pointer;
+  margin: 0 auto !important;
+}
+#featureModal .modal-dialog {
+  max-width: unset !important;
+  width: fit-content;
+  margin: auto;
+}
+.btn-fan {
+  background: #ac1991 !important;
+}
 footer {
   position: absolute;
   bottom: 2%;

@@ -10,7 +10,13 @@ var secondButton = document.querySelector(
   "#carousel-wrapper button:nth-child(2)"
 );
 let submitAllForm = document.getElementById("intrestSubmitBtn");
-
+let searchparams = window.location.search.split("=")[1];
+if (searchparams) {
+  goToLastSlide("carouselExampleIndicators");
+  document.querySelector("#carousel-wrapper").style.display = "none";
+  document.querySelector(".carousel-control-prev").style.display = "none";
+  document.querySelector("#app").style.height = "102vh";
+}
 let thankYouModal = document.getElementById("thankyouModal");
 let thankYouModalagain = new bootstrap.Modal(thankYouModal);
 var modal = document.getElementById("featureModal");
@@ -73,13 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": apiKey,
-        },
-        body: JSON.stringify(data),
-      })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+      },
+      body: JSON.stringify(data),
+    })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);
@@ -89,33 +95,28 @@ document.addEventListener("DOMContentLoaded", function () {
           callFeatures(apiResponse.data._id);
         }
         if (apiResponse.error) {
-          console.log("error message: ", apiResponse.message)
-          if (apiResponse.message.includes('Username')) {
-            validator1.style.visibility = "visible"
-            validator2.style.visibility = "hidden"
-            validFname.style.visibility = "hidden"
-            validLname.style.visibility = "hidden"
-
-
-          } else if (apiResponse.message.includes('Email')) {
-            validator2.style.visibility = "visible"
-            validator1.style.visibility = "hidden"
-            validFname.style.visibility = "hidden"
-            validLname.style.visibility = "hidden"
-
-
-          } else if (apiResponse.message.includes('f_name')) {
-            validFname.style.visibility = "visible"
-            validLname.style.visibility = "hidden"
-            validator1.style.visibility = "hidden"
-            validator2.style.visibility = "hidden"
+          console.log("error message: ", apiResponse.message);
+          if (apiResponse.message.includes("Username")) {
+            validator1.style.visibility = "visible";
+            validator2.style.visibility = "hidden";
+            validFname.style.visibility = "hidden";
+            validLname.style.visibility = "hidden";
+          } else if (apiResponse.message.includes("Email")) {
+            validator2.style.visibility = "visible";
+            validator1.style.visibility = "hidden";
+            validFname.style.visibility = "hidden";
+            validLname.style.visibility = "hidden";
+          } else if (apiResponse.message.includes("f_name")) {
+            validFname.style.visibility = "visible";
+            validLname.style.visibility = "hidden";
+            validator1.style.visibility = "hidden";
+            validator2.style.visibility = "hidden";
           } else {
-            validLname.style.visibility = "visible"
-            validFname.style.visibility = "hidden"
-            validator1.style.visibility = "hidden"
-            validator2.style.visibility = "hidden"
+            validLname.style.visibility = "visible";
+            validFname.style.visibility = "hidden";
+            validator1.style.visibility = "hidden";
+            validator2.style.visibility = "hidden";
           }
-
         }
 
         if (apiResponse.status === 422) {
@@ -239,7 +240,11 @@ function setVideoLinks() {
   const mode =
     window.innerWidth > window.innerHeight ? "landscape" : "portrait";
   // const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
-  const ext = (browser.browser.name === "Chrome" && browser.os.name == "iOS") || browser.browser.name === "Safari" ? "mp4" : "webm";
+  const ext =
+    (browser.browser.name === "Chrome" && browser.os.name == "iOS") ||
+    browser.browser.name === "Safari"
+      ? "mp4"
+      : "webm";
 
   for (let i = 1; i <= 6; i++) {
     const v = document.getElementById("s" + i);

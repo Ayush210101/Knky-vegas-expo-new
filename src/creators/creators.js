@@ -91,7 +91,7 @@ function setVideoLinks() {
     window.innerWidth > window.innerHeight ? "landscape" : "portrait";
   // const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
 
-  const ext = (browser.browser.name === "Chrome" && browser.os.name == "Ios") || browser.browser.name === "Safari" ? "mp4" : "webm";
+  const ext = (browser.browser.name === "Chrome" && browser.os.name == "iOS") || browser.browser.name === "Safari" ? "mp4" : "webm";
   for (let i = 1; i <= 6; i++) {
     const v = document.getElementById("s" + i);
     v.src = `https://expo.knky.co/static/${mode}/creator/s${i}.${ext}`;

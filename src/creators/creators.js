@@ -86,10 +86,12 @@ document.querySelector(".button-sign").addEventListener("click", function () {
 
 function setVideoLinks() {
   const browser = Bowser.parse(window.navigator.userAgent);
+  console.log(browser, "this is my browswr")
   const mode =
     window.innerWidth > window.innerHeight ? "landscape" : "portrait";
-  const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
+  // const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
 
+  const ext = (browser.browser.name === "Chrome" && browser.os.name == "Ios") || browser.browser.name === "Safari" ? "mp4" : "webm";
   for (let i = 1; i <= 6; i++) {
     const v = document.getElementById("s" + i);
     v.src = `https://expo.knky.co/static/${mode}/creator/s${i}.${ext}`;
@@ -137,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var lastName = document.getElementById("l_name").value;
     var email = document.getElementById("email").value;
     var username = document.getElementById("username").value;
-    // var validator1 = document.getElementById("valid-username");
+    var validator1 = document.getElementById("valid-username");
     var validator2 = document.getElementById("valid-email");
 
     if (
@@ -161,23 +163,30 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
     fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-      body: JSON.stringify(data),
-    })
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+        body: JSON.stringify(data),
+      })
       .then((response) => response.json())
       .then((apiResponse) => {
-        console.log("API response:", apiResponse);
+        console.log("API response:", apiResponse.error);
         if (apiResponse.message === "Success") {
           myModal.show();
           callFeatures(apiResponse.data._id);
         }
         if (apiResponse.error) {
-          // validator1.style.display = "block";
-          validator2.style.display = "block";
+          console.log("error message: ", apiResponse.message)
+          if (apiResponse.message.includes('Username')) {
+            validator1.style.display = "block"
+            validator2.style.display = "none"
+          } else {
+            validator1.style.display = "none"
+            validator2.style.display = "block"
+          }
+
         }
 
         if (apiResponse.status === 422) {

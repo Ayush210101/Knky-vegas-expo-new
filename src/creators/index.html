@@ -151,7 +151,7 @@
                     </div>
                     <div class="form-elements">
                       <div class="first-last-name">
-                        <div class="mb-3">
+                        <div class="mb-2">
                           <label
                             for="FormControlInput1"
                             class="form-label required"
@@ -164,9 +164,12 @@
                             name="f_name"
                             placeholder="Your first name"
                           />
+                          <span class="validation-message" id="valid-fname"
+                          >First name must contain at least 3 characters.</span
+                        >
                         </div>
 
-                        <div class="mb-3 lastname-inp">
+                        <div class="mb-2 lastname-inp">
                           <label
                             for="FormControlTextarea1"
                             class="form-label required"
@@ -179,10 +182,13 @@
                             name="l_name"
                             placeholder="Your last name"
                           />
+                          <span class="validation-message" id="valid-lname"
+                          >Last name must contain at least 3 characters.</span
+                        >
                         </div>
                       </div>
                       <div class="email-phone">
-                        <div class="mb-3 emailDiv">
+                        <div class="mb-2 emailDiv">
                           <label for="email" class="form-label required"
                             >Email</label
                           >
@@ -198,7 +204,7 @@
                           >
                         </div>
 
-                        <div class="mb-3 phone-inp">
+                        <div class="mb-2 phone-inp">
                           <label for="FormControlTextarea1" class="form-label"
                             >Phone number</label
                           >
@@ -467,7 +473,7 @@
                           >
                         </div>
                       </div>
-                      <div class="mb-3 username-input">
+                      <div class="mb-2 username-input">
                         <label for="FormControlTextarea1" class="form-label">
                           Requested Username</label
                         >

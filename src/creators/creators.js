@@ -141,6 +141,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var username = document.getElementById("username").value;
     var validator1 = document.getElementById("valid-username");
     var validator2 = document.getElementById("valid-email");
+    var validFname = document.getElementById("valid-fname");
+    var validLname = document.getElementById("valid-lname");
+
 
     if (
       !validateName(firstName) ||
@@ -180,11 +183,29 @@ document.addEventListener("DOMContentLoaded", function () {
         if (apiResponse.error) {
           console.log("error message: ", apiResponse.message)
           if (apiResponse.message.includes('Username')) {
-            validator1.style.display = "block"
-            validator2.style.display = "none"
+            validator1.style.visibility = "visible"
+            validator2.style.visibility = "hidden"
+            validFname.style.visibility = "hidden"
+            validLname.style.visibility = "hidden"
+
+
+          } else if (apiResponse.message.includes('Email')) {
+            validator2.style.visibility = "visible"
+            validator1.style.visibility = "hidden"
+            validFname.style.visibility = "hidden"
+            validLname.style.visibility = "hidden"
+
+
+          } else if (apiResponse.message.includes('f_name')) {
+            validFname.style.visibility = "visible"
+            validLname.style.visibility = "hidden"
+            validator1.style.visibility = "hidden"
+            validator2.style.visibility = "hidden"
           } else {
-            validator1.style.display = "none"
-            validator2.style.display = "block"
+            validLname.style.visibility = "visible"
+            validFname.style.visibility = "hidden"
+            validator1.style.visibility = "hidden"
+            validator2.style.visibility = "hidden"
           }
 
         }

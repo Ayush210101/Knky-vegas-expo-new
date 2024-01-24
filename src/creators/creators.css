@@ -444,6 +444,7 @@ footer.vegas-expo p {
   }
   .country-code {
     width: auto;
+    padding: 7px 11px;
   }
   .email-phone .mb-2 input[type="tel"] {
     width: 100%;

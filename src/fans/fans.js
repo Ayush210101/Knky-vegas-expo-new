@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var lastName = document.getElementById("l_name").value;
     var email = document.getElementById("email").value;
     var username = document.getElementById("username").value;
+    var phoneCode = document.getElementById("phone-code").value;
+    var phoneNo = document.getElementById("phone-no").value;
     var validator1 = document.getElementById("valid-username");
     var validator2 = document.getElementById("valid-email");
     var validFname = document.getElementById("valid-fname");
@@ -66,11 +68,45 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    function startSpinner() {
+      var opts = {
+        lines: 13, // The number of lines to draw
+        length: 20, // The length of each line
+        width: 10, // The line thickness
+        radius: 20, // The radius of the inner circle
+        scale: 1, // Scales overall size of the spinner
+        corners: 1, // Corner roundness (0..1)
+        color: '#ac1991', // CSS color or array of colors
+        fadeColor: 'transparent', // CSS color or array of colors
+        speed: 1, // Rounds per second
+        rotate: 0, // The rotation offset
+        animation: 'spinner-line-fade-quick', // The CSS animation name for the lines
+        direction: 1, // 1: clockwise, -1: counterclockwise
+        zIndex: 2e9, // The z-index (defaults to 2000000000)
+        className: 'spinner', // The CSS class to assign to the spinner
+        top: '50%', // Top position relative to parent
+        left: '50%', // Left position relative to parent
+        shadow: '0 0 1px transparent', // Box-shadow for the lines
+        position: 'absolute' // Element positioning
+      };
+      var target = document.getElementById('spinner-container');
+      var spinner = new Spinner(opts).spin(target);
+    }
+
+    function stopSpinner() {
+      var target = document.getElementById('spinner-container');
+      var spinner = target.querySelector('.spinner');
+      if (spinner) {
+        target.removeChild(spinner);
+      }
+    }
+
     const data = {
       f_name: firstName,
       l_name: lastName,
       username: username ? username : "knky-user-" + Math.random(),
       email: email,
+      phone_number: phoneCode + phoneNo,
       user_type: "USER", // Set a default value or dynamically retrieve it
       source: "EXPO",
     };
@@ -78,23 +114,30 @@ document.addEventListener("DOMContentLoaded", function () {
     var apiUrl =
       "https://admin-alpha-backend.knky.co/v1/users/capture-signup-interest";
     var apiKey = "gslie49st7kjjgd9268ux0t63";
+    startSpinner()
     fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-      body: JSON.stringify(data),
-    })
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+        body: JSON.stringify(data),
+      })
       .then((response) => response.json())
       .then((apiResponse) => {
         console.log("API response:", apiResponse);
         if (apiResponse.message === "Success") {
+          stopSpinner()
+
           myModal.show();
           // console.log("hehehehehe");
           callFeatures(apiResponse.data._id);
+          event.target.reset();
+
         }
         if (apiResponse.error) {
+          stopSpinner()
+
           console.log("error message: ", apiResponse.message);
           if (apiResponse.message.includes("Username")) {
             validator1.style.visibility = "visible";
@@ -120,12 +163,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (apiResponse.status === 422) {
+          stopSpinner()
+
           displayValidationMessages(apiResponse.message);
+
         } else {
           // Calling it  with the user ID
         }
       })
       .catch((error) => {
+        stopSpinner()
+
         console.error("Error:", error);
       });
   });
@@ -242,9 +290,9 @@ function setVideoLinks() {
   // const ext = browser.browser.name === "Safari" ? "mp4" : "mp4";
   const ext =
     (browser.browser.name === "Chrome" && browser.os.name == "iOS") ||
-    browser.browser.name === "Safari"
-      ? "mp4"
-      : "webm";
+    browser.browser.name === "Safari" ?
+    "mp4" :
+    "webm";
 
   for (let i = 1; i <= 6; i++) {
     const v = document.getElementById("s" + i);

@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="./creators.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-93CHQ5YY9M"></script>
@@ -109,6 +110,7 @@
             </div>
 
             <div class="carousel-item">
+              <div id="spinner-container"></div>
               <form id="signupForm">
                 <div class="form-banner">
                   <div class="header-cont">
@@ -147,7 +149,7 @@
                         <div class="country-inp">
                           <div class="country-code">
                             <img id="c-flag" src="https://flagcdn.com/16x12/us.png" />
-                            <input onchange="checkCountry()" class="flag-input" value="+1" />
+                            <input onchange="checkCountry()" id="phone-code" class="flag-input" value="+1" />
                           </div>
                           <script>
                             let countryList = {
@@ -390,7 +392,7 @@
                               ).src = `https://flagcdn.com/16x12/${country.toLowerCase()}.png`;
                             }
                           </script>
-                          <input type="tel" class="form-control" id="FormControlInput1" placeholder="00 000 000" />
+                          <input type="tel" class="form-control" id="phone-no" placeholder="00 000 000" />
                         </div>
                         <span class="validation-message" id="phone">This phone number is already in used</span>
                       </div>
